@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiComm_ExpanderAndLazyView.ExpanderContent">
+    <Grid ColumnSpacing="0"
+          RowSpacing="0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="50"/>
+            <ColumnDefinition Width="65"/>
+            <ColumnDefinition Width="10"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Frame Grid.Row="0"
+               Grid.Column="1"
+               Grid.ColumnSpan="2"
+               HorizontalOptions="FillAndExpand">
+            <Picker/>
+        </Frame>
+        <Image Grid.Row="0"
+               Grid.Column="3" 
+               Source="help">
+            <Image.GestureRecognizers>
+                <TapGestureRecognizer/>
+            </Image.GestureRecognizers>
+        </Image>
+
+        <Label Grid.Row="1"
+               Grid.Column="1"
+               Text="Capture using single-shot mirror division method"/>
+        <Image Grid.Row="1"
+               Grid.Column="2" 
+               Source="help">
+            <Image.GestureRecognizers>
+                <TapGestureRecognizer/>
+            </Image.GestureRecognizers>
+        </Image>
+        <Switch Grid.Row="1"
+                Grid.Column="3"/>
+
+        <Label Grid.Row="2"
+               Grid.Column="1"
+               Grid.ColumnSpan="2"
+               Text="Immersive final viewing"/>
+        <Switch Grid.Row="2"
+                Grid.Column="3"/>
+
+        <Label Grid.Row="3"
+               Grid.Column="1" 
+               Grid.ColumnSpan="2"
+               Text="Cardboard separation distance"/>
+        <Frame Grid.Row="3" 
+               Grid.Column="3">
+            <Entry/>
+        </Frame>
+
+        <Label Grid.Row="4"
+               Grid.Column="1"
+               Grid.ColumnSpan="2"
+               Text="Add lens correction/barrel distortion (may lower frame rate)"/>
+        <Switch Grid.Row="4" 
+                Grid.Column="3" />
+
+        <Label Grid.Row="5"
+               Grid.Column="1" 
+               Grid.ColumnSpan="2"
+               Text="Add lens correction/barrel distortion to final images only (may slow down final display but will speed up capturing)"
+               IsVisible="False">
+        </Label>
+        <Switch Grid.Row="5"
+                Grid.Column="3" 
+                IsVisible="False">
+        </Switch>
+
+        <Label Grid.Row="6"
+               Grid.Column="1" 
+               Grid.ColumnSpan="2"
+               Text="Lens correction strength"
+               IsVisible="False">
+        </Label>
+        <Frame Grid.Row="6"
+               Grid.Column="3" 
+               IsVisible="False">
+            <Entry/>
+        </Frame>
+
+        <Label Grid.Row="7"
+               Grid.Column="1"
+               Grid.ColumnSpan="2"
+               Text="Downsize image (may increase frame rate)"
+               IsVisible="False">
+        </Label>
+        <Switch Grid.Row="7"
+                Grid.Column="3"
+                IsVisible="False">
+        </Switch>
+
+        <Label Grid.Row="8"
+               Grid.Column="1"
+               Grid.ColumnSpan="2"
+               Text="Downsize image percentage"
+               IsVisible="False">
+        </Label>
+        <Frame Grid.Row="8"
+               Grid.Column="3"
+               IsVisible="False">
+            <Entry/>
+        </Frame>
+
+        <Button Grid.Row="9"
+                Grid.Column="1"
+                Grid.ColumnSpan="3" 
+                Text="Reset to Defaults"/>
+
+        <Label Grid.Row="2"
+               Grid.Column="1" 
+               Grid.ColumnSpan="2"
+               Text="Maximum parallel view image width (points)"
+               />
+        <Frame Grid.Row="2" Grid.Column="3">
+            <Entry/>
+        </Frame>
+    </Grid>
+</ContentView>
